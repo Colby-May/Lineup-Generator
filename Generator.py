@@ -24,7 +24,7 @@ def getPlayers():
     # Make dictionaries for each player and add them to player_dict_list
     player_dict_list = []
     for x in player_list:
-        player_dict_list += [{desc_keys[i] : x[i] for i in range(len(x))}]
+        player_dict_list += [{keys_list[i] : x[i] for i in range(len(x))}]
 
     playerSelect(player_dict_list)
 
@@ -141,7 +141,7 @@ def checkDuplicate(lineup_dict_list):
     # Sort players in lineup by name and check if it's in all_sorted_lineups
     # If not return true and add sorted_lineup to global all_sorted_lineups, else return false
     sorted_lineup = sorted(lineup_dict_list, key=itemgetter('name'))
-    if sorted_lineup not in all_lineups:
+    if sorted_lineup not in all_sorted_lineups:
         all_sorted_lineups.append(sorted_lineup)
         return True
     else:
