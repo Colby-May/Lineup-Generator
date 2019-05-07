@@ -5,7 +5,7 @@
 import csv
 import random
 from operator import itemgetter
-all_lineups = []
+all_sorted_lineups = []
 
 def getPlayers():
 
